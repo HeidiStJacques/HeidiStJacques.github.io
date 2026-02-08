@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
+
+
+/*GLOBAL*/
+body {
+    padding-top: 5rem;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+main {
+    padding: 20px;
+}
+main.container-fluid {
+    width: 50%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+nav {
+    margin-bottom: 120px;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+button.navbar-toggler{
+margin-right: 10px;
+}
+
+.home_2col {
+    margin-bottom: 20px;
+}
+
+img.dibley {
+    max-width: 100%
+}
+/* ===============================
+   CSS GRID PAGE STYLES
+   =============================== */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* shared box styling */
+.grid-container div {
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+/* Grid placement + colors */
+
+.one {
+    grid-column: 1 / 4;
+    background-color: #9b3a3f;
+    color: #000;
+}
+
+.two {
+    grid-column: 1 / 2;
+    background-color: #f6e6b5;
+}
+
+.three {
+    grid-column: 2 / 4;
+    background-color: #a7c9a2;
+}
+
+.four {
+    grid-column: 2 / 3;
+    background-color: #cfe9f9;
+}
+
+.five {
+    grid-column: 3 / 4;
+    background-color: #5b57f0;
+    color: #000;
+}
+
+.six {
+    grid-column: 1 / 4;
+    background-color: #ff70c8;
+}
+
+/* Carousel */
+
+.carousel img {
+    height: 400px;
+    object-fit: cover;
+}
