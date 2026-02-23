@@ -1,45 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
 
 
-/*GLOBAL*/
+/* GRID CONTAINER */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
 body {
-    padding-top: 5rem;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5dc;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Playfair Display', serif;
-}
-
-
-main {
+/* POSITIONING */
+.one {
+    grid-column: 1 / 4;
+    background-color: #a94442;
     padding: 20px;
 }
-main.container-fluid {
-    width: 50%;
+
+.two {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background-color: #e6d3a3;
+    padding: 20px;
 }
 
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
+.three {
+    grid-column: 2 / 4;
+    background-color: #a8c7a8;
+    padding: 20px;
 }
 
-nav {
-    margin-bottom: 120px;
+.four {
+    grid-column: 2 / 3;
+    background-color: #9ec1da;
+    padding: 20px;
 }
 
-.navbar-brand {
-    margin-left: 20px;
+.five {
+    grid-column: 3 / 4;
+    background-color: #6a5acd;
+    padding: 20px;
 }
 
-button.navbar-toggler{
-margin-right: 10px;
+.six {
+    grid-column: 1 / 4;
+    background-color: #e754b5;
+    padding: 20px;
 }
 
-.home_2col {
-    margin-bottom: 20px;
-}
-
-img.dibley {
-    max-width: 100%
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
 }
