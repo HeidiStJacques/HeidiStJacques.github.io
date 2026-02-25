@@ -18,7 +18,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f5f5dc;
+    background-color: #ffffff;
 }
 
 /* POSITIONING */
@@ -61,4 +61,24 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+}
+
+.page-content {
+    margin-top: 100px; 
+}
+
+.carousel-img {
+    width: 30%;
+}
+
+.hero-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+intro-paragraph {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 1rem;
+    line-height: 1.6;
 }
