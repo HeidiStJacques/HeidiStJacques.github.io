@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>St Jacques, Heidi: 225</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
-    <!-- Bootstrap core CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn more about Heidi St Jacques, a web development student focused on responsive design, accessibility, and building clean, user-friendly websites using HTML, CSS, JavaScript, and Bootstrap.">
+    <meta name="author" content="Heidi St Jacques">
+    <title>About: Heidi St Jacques</title>
 
-    <!-- Custom styles for this template -->
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS (load first) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Custom CSS (load after Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Heidi St Jacques</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="index.html">Heidi St Jacques</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
+        <ul class="navbar-nav me-auto">
             <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="grid.html">Grid</a>
@@ -36,55 +38,48 @@
                 <a class="nav-link" href="carousel.html">Carousel</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<main role="main" class="container-fluid">
+<main role="main" class="container-fluid page-content">
     <div id="h1"></div>
     <div id="img"></div>
-    <div id="content"></div>
+    <h2>About the Developer</h2>
+        <p>
+            This page introduces my background and interests as a web development student. 
+            The content on this page is dynamically rendered using React, demonstrating my ability to create and render elements programmatically rather than writing static HTML alone. 
+            This approach highlights the integration of JavaScript frameworks within traditional web structure.
+        </p>
 
-    <script>
-        const user = {
-            name: 'Heidi St Jacques',
-            imageUrl:'images/heidi.png',
-            bio: "Hi! I'm Heidi I am a Web Design & Development student and I am someone who values balance, growth, and staying curious about the world around me. I enjoy spending time outdoors, especially in the summer when the weather makes it easy to slow down and appreciate being outside. Whether it's being near the water, enjoying fresh air, or just taking a quiet walk, I find that those moments help me reset and refocus.  I tend to approach life with persistence and a positive mindset. I believe in showing up consistently, even when things feel challenging, and learning as I go. I value organization and thoughtfulness, but I also try to leave room for creativity and personal expression. I'm always working toward becoming a more confident and capable version of myself, both personally and professionally."
-        };
+    <h2>Expanding Technical Skills</h2>
+        <p>
+            In addition to foundational HTML and CSS knowledge, I am developing skills in JavaScript libraries, responsive design strategies, and structured content development. 
+            Learning how to integrate tools like React into a webpage strengthens my understanding of modern web application architecture and interactive user interfaces.
+        </p>
+</main>
 
-    // Step one - Create a React element
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2026 Heidi St Jacques</p>
+</footer>
 
-    const heading = React.createElement("h1", null, user.name);
-    const image = React.createElement("img",{
-        src: user.imageUrl,
-        alt: user.name,
-        width: "200",
-        height: "200",
-        className: "d-block mx-auto mt-3"
-    });
-    const paragraph = React.createElement(
-    "p",
-    { className: "text-center mt-3" },
-    user.bio
-    );
+<!-- React (external scripts are allowed) -->
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-    // Step 2: Render the React element
-    ReactDOM.render(heading, document.getElementById("h1"));
-    ReactDOM.render(image, document.getElementById("img"));
-    ReactDOM.render(paragraph, document.getElementById("content"));
-    </script>
+<!-- Your About page React code (external file) -->
+<script src="js/about.js"></script>
 
-</main><!-- /.container -->
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
